@@ -1,0 +1,52 @@
+/* TSP - Template Switcher Panel */
+/* Override app.css .tsp-card to ensure text is always readable */
+button.tsp-card{color:#111 !important;}
+
+/* Card info text — always visible */
+.tsp-info{padding:8px 6px 10px;text-align:center;background:#fff}
+.tsp-info strong{display:block;font-size:12px;font-weight:600;color:#111 !important;line-height:1.3}
+.tsp-info small{display:block;font-size:10px;color:#666 !important;margin-top:2px}
+
+/* Panel layout */
+.template-switcher-panel{margin:16px 0;padding:16px;border:1px solid rgba(17,24,39,.12);border-radius:14px;background:rgba(255,255,255,.66)}
+.tsp-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.tsp-title{font-weight:600;color:#111827;font-size:14px}
+.tsp-current{color:#0a84ff;font-weight:600;font-size:13px}
+.tsp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+@media(max-width:600px){.tsp-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:380px){.tsp-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Card base */
+.tsp-card{
+  padding:0;
+  border:2px solid transparent;
+  border-radius:14px;
+  background:#fff;
+  cursor:pointer;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+  overflow:hidden;
+  text-align:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.08);
+  color:#111;
+}
+.tsp-card:hover{border-color:#0a84ff;transform:translateY(-3px);box-shadow:0 6px 16px rgba(10,132,255,.18);color:#0a84ff}
+.tsp-card.tsp-active{border-color:#0a84ff !important;box-shadow:0 0 0 3px rgba(10,132,255,.2);transform:translateY(-2px);color:#0a84ff}
+.tsp-card.tsp-active .tsp-info strong{color:#0a84ff !important}
+
+/* Thumb area */
+.tsp-thumb{height:60px;display:flex;align-items:center;justify-content:center;gap:4px;padding:8px;overflow:hidden}
+.tsp-lines{display:flex;flex-direction:column;gap:3px;width:70%}
+.tsp-line{height:3px;background:rgba(255,255,255,.9);border-radius:2px;width:100%}
+.tsp-line-short{width:55%}
+
+/* Thumbnail shapes */
+.tsp-shape{background:rgba(255,255,255,.7);border-radius:50%}
+.tsp-circle{width:18px;height:18px}
+.tsp-rounded{width:18px;height:18px;border-radius:6px}
+.tsp-sidebar-shape{display:flex;align-items:stretch;height:30px;width:70%;gap:4px}
+.tsp-sidebar-bar{width:8px;background:rgba(255,255,255,.5);border-radius:2px;flex-shrink:0}
+.tsp-sidebar-content{flex:1;display:flex;flex-direction:column;justify-content:center;gap:3px;padding:2px 0}
+.tsp-serif-preview{flex:1;display:flex;flex-direction:column;gap:3px;padding:4px 0;width:70%}
+.tsp-serif-h1{height:6px;background:rgba(0,0,0,.3);border-radius:2px}
+.tsp-serif-border{height:2px;background:rgba(0,0,0,.15)}
+.tsp-h1-line{height:6px;background:rgba(0,0,0,.25);border-radius:2px;width:90%;margin-bottom:3px}

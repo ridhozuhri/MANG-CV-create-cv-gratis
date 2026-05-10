@@ -1,0 +1,139 @@
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: -999px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  top: 0;
+  left: 0;
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Accessibility Toolbar */
+#a11y-toolbar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--paper);
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border: 1px solid var(--line);
+}
+
+#a11y-toolbar button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+
+#a11y-toolbar button:hover {
+  transform: scale(1.1);
+  background: #0070e0;
+}
+
+#a11y-toolbar button:active {
+  transform: scale(0.95);
+}
+
+#a11y-toolbar button:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+html.hc-high {
+  --bg: #000;
+  --ink: #fff;
+  --paper: #111;
+  --line: #444;
+  --accent: #ffcc00;
+  --accent2: #00ffcc;
+  --muted: #aaa;
+  --focus: 0 0 0 4px #ffcc00;
+}
+
+html.hc-high body {
+  background: #000;
+  color: #fff;
+}
+
+html.hc-high .wizard-shell {
+  background: #111;
+  border-color: #444;
+}
+
+html.hc-high input,
+html.hc-high textarea,
+html.hc-high select {
+  background: #222;
+  color: #fff;
+  border-color: #666;
+}
+
+html.hc-high .btn {
+  background: #ffcc00;
+  color: #000;
+  border-color: #ffcc00;
+}
+
+html.hc-high .step-link {
+  background: #222;
+  color: #fff;
+  border-color: #666;
+}
+
+html.hc-high .step-link.active {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Focus visible improvements */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

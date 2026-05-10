@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Content 'F:\\\\laragon\\\\www\\\\MANG-CV\\\\app\\\\Views\\\\templates\\\\modern.php'\")",
+      "Bash(powershell -Command \"Get-Content 'F:\\\\laragon\\\\www\\\\MANG-CV\\\\app\\\\Views\\\\templates\\\\sidebar.php'\")",
+      "Bash(powershell -Command \"Test-Path 'F:\\\\laragon\\\\www\\\\MANG-CV\\\\writable'\")"
+    ]
+  }
+}
